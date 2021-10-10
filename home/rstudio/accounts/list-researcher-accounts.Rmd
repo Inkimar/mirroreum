@@ -1,0 +1,17 @@
+# Users in mirroreum
+
+```{r, echo=FALSE, message=FALSE}
+
+library(readr)
+library(dplyr)
+
+users <- 
+  read_csv(file = "credentials_history.csv", 
+     col_types = "ccccc") %>%
+  select(Email, Firstnames, Lastnames)
+
+knitr::kable(users)
+
+```
+
+
