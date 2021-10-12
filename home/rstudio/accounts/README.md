@@ -1,5 +1,23 @@
-Accounts Management
-================
+# Accounts Management 2021-10-12
+
+## Original setup of files
+1. credentials_history.csv
+2. list-researcher-accounts.R
+3. list-researcher-accounts.Rmd
+4. migrate-accounts.R
+5. README.md
+6. README.Rmd
+7. researchers.csv
+8. setup-researcher-accounts.R
+
+### Order of running things
+1. docker-compose up -d 
+2. -> domain:8787 -> 
+3. login with the credentials set in the docker-compose file -> rstudio/sbdi
+
+
+# Accounts Management Original
+
 BioAtlas Sweden
 9/26/2017
 
