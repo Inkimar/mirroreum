@@ -2,7 +2,6 @@ version: '3.7'
 
 volumes:
   data_sbdi:
-  data_rstudio-home:
 
 services:
 
@@ -17,12 +16,9 @@ services:
       - PASSWORD=sbdi
     volumes:
       - data_sbdi:/root/.config/sbdi
-      - data_rstudio-home:/home/rstudio
       - .Renviron:/home/rstudio/.Renviron:ro
       - ./login.html:/etc/rstudio/login.html:ro
       - ./rserver.conf:/etc/rstudio/rserver.conf
-        #- ./home/rstudio/accounts:/home/rstudio/accounts
-        #- ./home/rstudio/researchers:/home/rstudio/researchers
-        #- ./home/rstudio/skeleton:/home/rstudio/skeleton
+      - ./home/rstudio:/home/rstudio
     command: /init 
 
